@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="/assets/jquery.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Secular+One&family=Shadows+Into+Light&display=swap"
+    rel="stylesheet" type='text/css'>
+</head>
+
+<body>
+  <header>
+    <h1><span class="dumb">DUMB</span> STARBUCKS COFFEE</h1>
+    <h2>1802 Hillhurst Ave.<br /> Los Angeles, California</h2>
+  </header>
+  <div class="coffee">
+    <p>Coffee<span class="price">6</span><br />
+      <small>Regular or decaf, hot or iced</small>
+    </p>
+  </div>
+
+  <div class="tea">
+    <p>Tea<span class="price">4</span><br />
+      <small>Chai, Earl Grey, English breakfast, or green tea</small>
+    </p>
+  </div>
+
+  <div class="muffin">
+    <p>Muffin <span class="price">8</span><br />
+      <small>Your choice of blueberry, chocolate chip, or cranberry-orange.</small>
+    </p>
+  </div>
+</body>
+
+</html>
+
+<script>
+  $('div').on('click', function () {
+    $(this).toggleClass('show-description');
+  });
+</script>
+
+<style>
+  header {
+    background-color: #2D8662;
+  }
+
+  body {
+    font-family: helvetica, sans-serif;
+    margin: 0 auto;
+    max-width: 700px;
+    background: #fff;
+    background-image: url("https://images.unsplash.com/photo-1618105965240-9aa565e73a0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1976&q=80");
+    background-position: center;
+  }
+
+  div {
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    margin: 40px 0 0 0;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+    font-size: 75px;
+    color: #ffffff;
+    margin: 60px 0 0 0;
+    padding: 20px 0 0 0;
+    font-weight: bold;
+    line-height: 40px;
+  }
+
+  h2 {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: #000000;
+    margin: 0px 0 70px 0;
+    padding: 20px;
+    line-height: 25px
+  }
+
+  p {
+    color: rgba(255, 255, 255, 1);
+    background: black;
+    background: linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    background: -moz-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, .4));
+    padding: 10px;
+    line-height: 28px;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    height: 30px;
+    width: 75%;
+    transition: height .5s;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+  }
+
+  .dumb {
+    font-size: 30px;
+  }
+
+  small {
+    opacity: 0;
+  }
+
+  .show-description p {
+    height: 150px;
+  }
+
+  .show-description small {
+    opacity: 1;
+  }
+
+  .coffee {
+    background-image: url("https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+    background-position: center;
+  }
+
+  .tea {
+    background-image: url("https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80");
+    background-position: center;
+  }
+
+  .muffin {
+    background-image: url("https://images.unsplash.com/photo-1557925923-6982bd9650ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1972&q=80");
+    background-position: 0 75%;
+  }
+
+  .price {
+    float: right;
+  }
+
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 50px;
+      margin-top: 20px;
+      line-height: 40px;
+      padding: 5px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 30px 0;
+      padding: 5px
+    }
+
+    div {
+      margin: 20px 12px 0 12px;
+    }
+
+    p {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    small {
+      font-size: 18px;
+    }
+  }
+</style>
